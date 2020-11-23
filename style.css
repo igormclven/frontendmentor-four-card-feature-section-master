@@ -1,0 +1,161 @@
+:root{
+    --rojo: hsl(0, 100%, 74%);
+    --cyan: hsl(180, 62%, 55%);
+    --naranja: hsl(34, 97%, 64%);
+    --azul: hsl(212, 86%, 64%);
+    --azul-dark: hsl(234, 12%, 34%);
+    --azul-grisaseo: hsl(229, 6%, 66%);
+    --gris-claro: hsl(0, 0%, 98%);
+
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+
+ 
+    --font-light: 200;
+    --font-normal: 400;
+    --font-bold: 600;
+
+}
+
+body{
+    background-color: var(--gris-claro);
+    padding: 3rem 1.75rem;
+    color: var(--azul-grisaseo);
+}
+
+h1{
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: var(--font-light);
+    line-height: 1.5;
+    color: var(--azul-dark);
+    margin: 1rem 0 1.25rem;
+}
+
+@media screen and (min-width: 1200px){
+    h1{
+        font-size: 2.5rem;
+    }
+}
+
+strong{
+    font-weight: var(--font-bold);
+    display: block;
+}
+
+.texto{
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.7;
+    margin: auto;
+    margin-bottom: 3.75rem;
+}
+
+@media screen and (min-width: 1200px){
+    .texto{
+        max-width: 500px;
+    }
+}
+
+/* Grid */ 
+.grid{
+    display: grid;
+    gap: 30px;
+    margin: auto;
+}
+@media screen and (min-width: 1200px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        max-width: 1100px;
+    }
+}
+
+/* Cards*/ 
+.card{
+    padding: 2rem;
+    box-shadow: 0 10px 20px hsla(212, 86%, 30%, 0.15);
+    background-color: white;
+    border: 1px solid white;
+
+    --p-top:0.3rem;
+
+    border-radius: var(--p-top);
+    border-top: var(--p-top) solid var(--card-color);
+}
+
+.supervisor{
+    --card-color: var(--cyan)
+}
+@media screen and (min-width: 1200px){
+.supervisor{
+    grid-column: 1;
+    grid-row: 2 / span 2;
+}
+}
+
+.team{
+    --card-color: var(--rojo)
+}
+
+@media screen and (min-width: 1200px){
+    .team{
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+}
+
+.karma{
+    --card-color: var(--naranja)
+}
+
+@media screen and (min-width: 1200px){
+    .karma{
+        grid-column: 2;
+        grid-row: 3 / span 2;
+    }
+}
+
+.calculator{
+    --card-color: var(--azul)
+}
+
+@media screen and (min-width: 1200px){
+    .calculator{
+        grid-column: 3;
+        grid-row: 2 / span 2;
+    }
+}
+
+/* Card interna*/
+.titulo{
+    color: var(--azul-dark);
+    margin: 0 0 0.6rem;
+    font-size: 1.3rem;
+}
+
+.desc{
+    margin: 0 0 3rem;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.img{
+
+    display: block;
+    margin-left: auto;
+
+}
+
+/* atribución */
+.atribucion{
+    font-size: 1rem;
+    text-align: center;
+    color: var(--azul-dark);
+    line-height: 1.8;
+    margin-top: 4rem;
+}
+
+.atribucion a{
+    color: hsl(228, 45%, 44%);
+}
